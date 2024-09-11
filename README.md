@@ -1,2 +1,4 @@
-# gen_python_module
-Generation UK&amp;I Python Mo
+# Generation UK&I Python Module
+
+
+The following is merely the cloned copy of the Generation UK&I Python module to complete while on the programme.
