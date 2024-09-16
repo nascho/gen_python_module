@@ -1,5 +1,5 @@
 # Functions
-
+ 
 ## Learning Objectives
 
 - Understand what a function is, how to define it, and when to use it

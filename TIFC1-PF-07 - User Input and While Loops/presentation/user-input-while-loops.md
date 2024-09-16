@@ -1,6 +1,6 @@
 # User Input and While Loops
 ---
-
+ 
 ## Learning Objectives
 
 - To understand the purpose of while loops and when it can be helpful
