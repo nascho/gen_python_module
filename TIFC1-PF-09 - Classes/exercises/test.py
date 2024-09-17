@@ -111,5 +111,107 @@ print(user_1.login_attempts)
 user_1.increment_login_attempts()
 print(user_1.login_attempts)
 
-print("\n/***************************************************************/\n")
+print("\n/*************************************************************/\n")
 
+# 3
+# car 
+
+class Car():
+
+  def __init__(self, make, model, year, mileage):
+    self.make = make
+    self.model = model
+    self.year = year
+    self.mileage = mileage
+
+  def get_info(self):
+    return (f"Make: {self.make.title()}\nModel: {self.model.title()}\nYear: {self.year}\nMileage: {self.mileage}\n")
+
+  def set_mileage(self, miles):
+    self.mileage = miles
+
+  def get_mileage(self):
+    return self.mileage
+
+car_1 = Car('ford', 'focus', 2012, 130000)
+car_2 = Car('mercades benz', 'g-class', 2022, 50000)
+car_3 = Car('porsche', '911', 2018, 8000)
+
+print(car_1.get_info())
+print(car_2.get_info())
+print(car_3.get_info())
+
+car_3.set_mileage(8041)
+print(car_3.get_mileage())
+car_3.set_mileage(0)
+print(car_3.get_mileage())
+car_3.set_mileage(8059)
+print(car_3.get_mileage())
+
+print("\n/*************************************************************/\n")
+
+# 4
+# books
+
+class Book():
+  
+  def __init__(self, author, title, genre, pages):
+    
+    self.author = author
+    self.title = title
+    self.genre = genre
+    self.pages = pages
+
+  def display_info(self):
+    return f"{self.title.title()} is based on {self.genre.title()} written by {self.author.title()}."
+  
+  def set_pages(self, num_of_pages):
+    self.pages = num_of_pages
+
+  def get_pages(self):
+    return f"{self.pages} pages"
+  
+book_1 = Book('jospeh heller', 'catch-22', 'dark comedy', '200')
+book_2 = Book('robert greene', '48 rules of power', 'self help', '150')
+
+print(book_1.display_info())
+print(book_2.display_info())
+
+print(book_2.get_pages())
+book_2.set_pages(198)
+print(book_2.get_pages())
+
+print("\n/*************************************************************/\n")
+
+# 5
+# bank account
+
+class BankAccount():
+  
+  def __init__(self, acc_num, acc_holder, bal):
+    self.acc_num = acc_num
+    self.acc_holder = acc_holder
+    self.bal = int(bal)
+
+  def deposit(self, amount):
+    print(f"Previous balance was: {self.bal}")
+    self.bal += int(amount)
+    print(f"New balance including deposit: {self.bal}")
+
+  def withdrawal(self, amount):
+    if self.bal > amount:
+      print(f"Currect balance: {self.bal}")
+      self.bal -= amount
+      print(f"New balance: {self.bal}")
+    else:
+      print(f"Insufficient balance to make a withdrawal of: {amount}")
+
+  def get_statement(self):
+    return f"{self.acc_holder.title()} your account number is: {self.acc_num} and your balance is: {self.bal}."
+
+customer_1 = BankAccount('12345', 'adam smith', 0)
+print(customer_1.get_statement())
+
+customer_1.deposit(100)
+customer_1.withdrawal(50)
+print(customer_1.get_statement())
